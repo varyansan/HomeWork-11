@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Задание №1");
-        printInLeapYear(2000);
+        printInLeapYear(2020);
         System.out.println("Задание №2");
         printValidOSInfo(1, 2015);
         System.out.println("Задание №3");
@@ -14,7 +14,7 @@ public class Main {
     }
 
     public static void printInLeapYear(int year) {
-        if (year >= 1584 && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
+        if (year >= 1584 && year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
             System.out.println(year + " год является високосным.");
         } else {
             System.out.println(year + " год не является високосным.");
