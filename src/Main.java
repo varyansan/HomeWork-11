@@ -4,13 +4,16 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Задание №1");
-        printInLeapYear(2021);
+        printInLeapYear(2100);
         System.out.println("Задание №2");
         printValidOSInfo(1, 2015);
         System.out.println("Задание №3");
-        calculateDeliveryDays(95);
-
-
+        int days = calculateDeliveryDays(95);
+        if (days == -1) {
+            System.out.println("Доставки нет!");
+        } else {
+            System.out.println("Потребуется дней: " + days);
+        }
     }
 
     public static void printInLeapYear(int year) {
@@ -43,10 +46,7 @@ public class Main {
             } else if (distance > 60 && distance <= 100) {
                 days = 3;
             }
-            System.out.println("Потребуется дней: " + days);
         } else {
-            System.out.println("Доставки нет!");
-
             return -1;
         }
         return days;
